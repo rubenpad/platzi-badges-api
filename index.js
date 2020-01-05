@@ -14,7 +14,7 @@ const {
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
 // CORs
-app.use(cors());
+app.options('*', cors());
 
 // body-parser
 app.use(express.json());
