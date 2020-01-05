@@ -23,7 +23,6 @@ function badgesApi(app) {
     try {
       const badges = await badgesService.getBadges();
       res.status(200).json({
-        headers: { 'Access-Control-Allow-Origin': '*' },
         data: badges,
         message: 'badges listed'
       });
