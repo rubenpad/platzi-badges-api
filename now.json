@@ -1,12 +1,12 @@
 {
   "name": "platzibadges",
-  "version": 1,
+  "version": 2,
   "builds": [{ "src": "index.js", "use": "@now/node" }],
   "routes": [{ "src": "/(.*)", "dest": "/index.js" }],
   "env": {
-    "DB_USER": "@platzivideo-db-user",
-    "DB_PASSWORD": "@platzivideo-db-password",
-    "DB_HOST": "@platzivideo-db-host",
-    "DB_NAME": "@platzivideo-db-name"
+    "DB_USER": "@db-user",
+    "DB_PASSWORD": "@badges-db-password",
+    "DB_HOST": "@badges-db-host",
+    "DB_NAME": "@badges-db-name"
   }
 }
