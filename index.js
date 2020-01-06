@@ -15,15 +15,7 @@ const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
 // CORs
 app.use(cors());
-
-app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', 'YOUR-DOMAIN.TLD');
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  );
-  next();
-});
+app.options('*', cors());
 
 // body-parser
 app.use(express.json());
