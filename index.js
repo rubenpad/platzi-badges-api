@@ -13,12 +13,12 @@ const {
 } = require('./utils/middleware/errorHandlers');
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
-// body-parser
-app.use(express.json());
-
 // CORs
 app.use(cors());
 app.options('*', cors());
+
+// body-parser
+app.use(express.json());
 
 // routes
 badgesApi(app);
